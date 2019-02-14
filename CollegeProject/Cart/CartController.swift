@@ -2,29 +2,33 @@
 //  CartController.swift
 //  CollegeProject
 //
-//  Created by Manoj Kumar on 13/02/19.
+//  Created by  Sandiaa on 13/02/19.
 //  Copyright © 2019 Sandiaa. All rights reserved.
 //
 
 import UIKit
 
-class CartController: UIViewController {
-
+class CartController: UIViewController ,UITableViewDelegate , UITableViewDataSource {
+    @IBOutlet weak var cartProductTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tabBarController?.tabBar.isHidden = true
+        navigationItem.title = "Cart"
+        cartProductTableView.register(UINib(nibName: "CartProductCell", bundle: nil), forCellReuseIdentifier: "CartProductCell")
+        cartProductTableView.delegate = self
+        cartProductTableView.dataSource = self
+        cartProductTableView.separatorStyle = .none
+        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = cartProductTableView.dequeueReusableCell(withIdentifier: "CartProductCell", for: indexPath) as! CartProductCell
+        return cell
+    }
+    
 
 }

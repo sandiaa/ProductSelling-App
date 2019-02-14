@@ -50,13 +50,12 @@ class HomeController: UIViewController , UITableViewDelegate,UITableViewDataSour
             return cell
 
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
         return 150
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.navigationController?.pushViewController(ProductDetailsController(), animated: true)
-        
         let detailsController = ProductDetailsController()
         let str = "\(indexPath.section)" + "-" + "\(indexPath.row)"
         detailsController.myHeroId = str
