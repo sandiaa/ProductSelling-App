@@ -7,4 +7,9 @@ target 'CollegeProject' do
 
   # Pods for CollegeProject
     pod 'Hero'
+    pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod  'Firebase/Database'
+
+    
 end

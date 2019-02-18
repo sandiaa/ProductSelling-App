@@ -13,7 +13,7 @@ class CartController: UIViewController ,UITableViewDelegate , UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.isHidden = true
+        
         navigationItem.title = "Cart"
         cartProductTableView.register(UINib(nibName: "CartProductCell", bundle: nil), forCellReuseIdentifier: "CartProductCell")
         cartProductTableView.delegate = self
@@ -28,6 +28,9 @@ class CartController: UIViewController ,UITableViewDelegate , UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cartProductTableView.dequeueReusableCell(withIdentifier: "CartProductCell", for: indexPath) as! CartProductCell
         return cell
+    }
+    @IBAction func checkOutButton(_ sender: UIButton) {
+        self.navigationController?.pushViewController(LoginController(), animated: true)
     }
     
 

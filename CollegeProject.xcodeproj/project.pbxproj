@@ -35,6 +35,11 @@
 		FC3E181922141F6800BB8C72 /* ProductDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3E181722141F6800BB8C72 /* ProductDetailsController.xib */; };
 		FC91D73C2215931F000BD14F /* CartProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91D73A2215931F000BD14F /* CartProductCell.swift */; };
 		FC91D73D2215931F000BD14F /* CartProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC91D73B2215931F000BD14F /* CartProductCell.xib */; };
+		FC96CECE221A806F009BCCFC /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC96CECC221A806F009BCCFC /* SignupController.swift */; };
+		FC96CECF221A806F009BCCFC /* SignupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC96CECD221A806F009BCCFC /* SignupController.xib */; };
+		FCE3E42C221A777300FEE4EE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE3E42A221A777300FEE4EE /* LoginController.swift */; };
+		FCE3E42D221A777300FEE4EE /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE3E42B221A777300FEE4EE /* LoginController.xib */; };
+		FCE3E42F221A79E400FEE4EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCE3E42E221A79E400FEE4EE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,11 @@
 		FC3E181722141F6800BB8C72 /* ProductDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailsController.xib; sourceTree = "<group>"; };
 		FC91D73A2215931F000BD14F /* CartProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductCell.swift; sourceTree = "<group>"; };
 		FC91D73B2215931F000BD14F /* CartProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartProductCell.xib; sourceTree = "<group>"; };
+		FC96CECC221A806F009BCCFC /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		FC96CECD221A806F009BCCFC /* SignupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupController.xib; sourceTree = "<group>"; };
+		FCE3E42A221A777300FEE4EE /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		FCE3E42B221A777300FEE4EE /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		FCE3E42E221A79E400FEE4EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,8 @@
 				FC3E17CA221144AE00BB8C72 /* AppDelegate.swift */,
 				FC3E18012212E34900BB8C72 /* UPCarouselFlowLayout.swift */,
 				FC3E17F72212CCAA00BB8C72 /* UIView+Extension.swift */,
+				FC96CECB221A8048009BCCFC /* Signup */,
+				FCE3E421221A75E500FEE4EE /* Login */,
 				FC3E181A22141F7500BB8C72 /* ProductDetails */,
 				FC3E1815221415F700BB8C72 /* Cart */,
 				FC3E18102213FBC900BB8C72 /* Orders */,
@@ -135,6 +147,7 @@
 				FC3E17D4221144AF00BB8C72 /* Assets.xcassets */,
 				FC3E17D6221144AF00BB8C72 /* LaunchScreen.storyboard */,
 				FC3E17D9221144AF00BB8C72 /* Info.plist */,
+				FCE3E42E221A79E400FEE4EE /* GoogleService-Info.plist */,
 				FC3E17D1221144AE00BB8C72 /* CollegeProject.xcdatamodeld */,
 			);
 			path = CollegeProject;
@@ -200,6 +213,24 @@
 				FC3E181722141F6800BB8C72 /* ProductDetailsController.xib */,
 			);
 			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		FC96CECB221A8048009BCCFC /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				FC96CECC221A806F009BCCFC /* SignupController.swift */,
+				FC96CECD221A806F009BCCFC /* SignupController.xib */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		FCE3E421221A75E500FEE4EE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FCE3E42A221A777300FEE4EE /* LoginController.swift */,
+				FCE3E42B221A777300FEE4EE /* LoginController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,12 +299,15 @@
 				FC3E17D5221144AF00BB8C72 /* Assets.xcassets in Resources */,
 				FC3E18062213E6EB00BB8C72 /* FeaturedView.xib in Resources */,
 				FC3E180E2213FBB200BB8C72 /* ProfileController.xib in Resources */,
+				FC96CECF221A806F009BCCFC /* SignupController.xib in Resources */,
 				FC3E17F622116DE800BB8C72 /* ProductsCell.xib in Resources */,
 				FC3E18002212DF7500BB8C72 /* FeaturedProductCell.xib in Resources */,
 				FC3E181922141F6800BB8C72 /* ProductDetailsController.xib in Resources */,
 				FC3E17D0221144AE00BB8C72 /* Main.storyboard in Resources */,
 				FC3E180A2213FBA200BB8C72 /* OrdersController.xib in Resources */,
 				FC91D73D2215931F000BD14F /* CartProductCell.xib in Resources */,
+				FCE3E42D221A777300FEE4EE /* LoginController.xib in Resources */,
+				FCE3E42F221A79E400FEE4EE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,13 +345,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CollegeProject/Pods-CollegeProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -339,11 +381,13 @@
 				FC3E17FF2212DF7500BB8C72 /* FeaturedProductCell.swift in Sources */,
 				FC3E180D2213FBB200BB8C72 /* ProfileController.swift in Sources */,
 				FC3E18022212E34900BB8C72 /* UPCarouselFlowLayout.swift in Sources */,
+				FC96CECE221A806F009BCCFC /* SignupController.swift in Sources */,
 				FC3E17F522116DE800BB8C72 /* ProductsCell.swift in Sources */,
 				FC3E17D3221144AE00BB8C72 /* CollegeProject.xcdatamodeld in Sources */,
 				FC3E1813221415EF00BB8C72 /* CartController.swift in Sources */,
 				FC3E181822141F6800BB8C72 /* ProductDetailsController.swift in Sources */,
 				FC3E18042213E6DA00BB8C72 /* FeaturedView.swift in Sources */,
+				FCE3E42C221A777300FEE4EE /* LoginController.swift in Sources */,
 				FC3E17E522114C0100BB8C72 /* TabbarController.swift in Sources */,
 				FC3E17CB221144AE00BB8C72 /* AppDelegate.swift in Sources */,
 			);
