@@ -2,7 +2,7 @@
 //  ProductDetailsController.swift
 //  CollegeProject
 //
-//  Created by Manoj Kumar on 13/02/19.
+//  Created by Sandiaa on 13/02/19.
 //  Copyright © 2019 Sandiaa. All rights reserved.
 //
 

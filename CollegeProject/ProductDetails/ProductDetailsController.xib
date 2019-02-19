@@ -52,14 +52,14 @@
                                 <constraint firstAttribute="height" constant="250" id="Vio-Zl-wks"/>
                             </constraints>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="tjI-5u-P9H">
-                            <rect key="frame" x="10" y="20" width="355" height="200"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tjI-5u-P9H">
+                            <rect key="frame" x="10" y="20" width="344.5" height="200"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="200" id="dnZ-GL-8oX"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price/kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4U-33-bBE">
-                            <rect key="frame" x="2" y="240" width="371" height="50"/>
+                            <rect key="frame" x="12.5" y="240" width="350" height="50"/>
                             <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="AEW-f9-gJp"/>
@@ -70,7 +70,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg1-On-ZAT">
-                            <rect key="frame" x="2" y="310" width="371" height="50"/>
+                            <rect key="frame" x="12.5" y="310" width="350" height="50"/>
                             <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="VXB-Zb-003"/>
@@ -81,7 +81,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ha-qd-dXV">
-                            <rect key="frame" x="2" y="375" width="371" height="80"/>
+                            <rect key="frame" x="12.5" y="375" width="350" height="80"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deliveryBike" translatesAutoresizingMaskIntoConstraints="NO" id="96F-UC-0ZG">
                                     <rect key="frame" x="15" y="15" width="50" height="50"/>
@@ -177,7 +177,6 @@
         </view>
     </objects>
     <resources>
-        <image name="2" width="355" height="259"/>
         <image name="deliveryBike" width="45" height="45"/>
     </resources>
 </document>

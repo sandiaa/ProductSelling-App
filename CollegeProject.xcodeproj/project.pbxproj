@@ -37,9 +37,13 @@
 		FC91D73D2215931F000BD14F /* CartProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC91D73B2215931F000BD14F /* CartProductCell.xib */; };
 		FC96CECE221A806F009BCCFC /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC96CECC221A806F009BCCFC /* SignupController.swift */; };
 		FC96CECF221A806F009BCCFC /* SignupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC96CECD221A806F009BCCFC /* SignupController.xib */; };
+		FC96CED3221ADB83009BCCFC /* CheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC96CED1221ADB83009BCCFC /* CheckoutController.swift */; };
+		FC96CED4221ADB83009BCCFC /* CheckoutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC96CED2221ADB83009BCCFC /* CheckoutController.xib */; };
 		FCE3E42C221A777300FEE4EE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE3E42A221A777300FEE4EE /* LoginController.swift */; };
 		FCE3E42D221A777300FEE4EE /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE3E42B221A777300FEE4EE /* LoginController.xib */; };
 		FCE3E42F221A79E400FEE4EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCE3E42E221A79E400FEE4EE /* GoogleService-Info.plist */; };
+		FCEB37B4221BCFA5000EE14B /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB37B3221BCFA5000EE14B /* Database.swift */; };
+		FCEB37B7221C0FE3000EE14B /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB37B6221C0FE3000EE14B /* Products.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,9 +81,13 @@
 		FC91D73B2215931F000BD14F /* CartProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartProductCell.xib; sourceTree = "<group>"; };
 		FC96CECC221A806F009BCCFC /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
 		FC96CECD221A806F009BCCFC /* SignupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupController.xib; sourceTree = "<group>"; };
+		FC96CED1221ADB83009BCCFC /* CheckoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutController.swift; sourceTree = "<group>"; };
+		FC96CED2221ADB83009BCCFC /* CheckoutController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutController.xib; sourceTree = "<group>"; };
 		FCE3E42A221A777300FEE4EE /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		FCE3E42B221A777300FEE4EE /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		FCE3E42E221A79E400FEE4EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCEB37B3221BCFA5000EE14B /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		FCEB37B6221C0FE3000EE14B /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,9 @@
 				FC3E17CA221144AE00BB8C72 /* AppDelegate.swift */,
 				FC3E18012212E34900BB8C72 /* UPCarouselFlowLayout.swift */,
 				FC3E17F72212CCAA00BB8C72 /* UIView+Extension.swift */,
+				FCEB37B3221BCFA5000EE14B /* Database.swift */,
+				FCEB37B5221C0FC5000EE14B /* Models */,
+				FC96CED0221ADB66009BCCFC /* Checkout */,
 				FC96CECB221A8048009BCCFC /* Signup */,
 				FCE3E421221A75E500FEE4EE /* Login */,
 				FC3E181A22141F7500BB8C72 /* ProductDetails */,
@@ -224,6 +235,15 @@
 			path = Signup;
 			sourceTree = "<group>";
 		};
+		FC96CED0221ADB66009BCCFC /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				FC96CED1221ADB83009BCCFC /* CheckoutController.swift */,
+				FC96CED2221ADB83009BCCFC /* CheckoutController.xib */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
 		FCE3E421221A75E500FEE4EE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +251,14 @@
 				FCE3E42B221A777300FEE4EE /* LoginController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		FCEB37B5221C0FC5000EE14B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FCEB37B6221C0FE3000EE14B /* Products.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3E17E3221144E800BB8C72 /* HomeController.xib in Resources */,
+				FC96CED4221ADB83009BCCFC /* CheckoutController.xib in Resources */,
 				FC3E1814221415EF00BB8C72 /* CartController.xib in Resources */,
 				FC3E17D8221144AF00BB8C72 /* LaunchScreen.storyboard in Resources */,
 				FC3E17D5221144AF00BB8C72 /* Assets.xcassets in Resources */,
@@ -345,6 +374,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CollegeProject/Pods-CollegeProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
@@ -355,6 +386,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
@@ -390,6 +423,9 @@
 				FCE3E42C221A777300FEE4EE /* LoginController.swift in Sources */,
 				FC3E17E522114C0100BB8C72 /* TabbarController.swift in Sources */,
 				FC3E17CB221144AE00BB8C72 /* AppDelegate.swift in Sources */,
+				FCEB37B7221C0FE3000EE14B /* Products.swift in Sources */,
+				FCEB37B4221BCFA5000EE14B /* Database.swift in Sources */,
+				FC96CED3221ADB83009BCCFC /* CheckoutController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

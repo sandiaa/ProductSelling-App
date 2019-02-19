@@ -8,16 +8,22 @@
 
 import UIKit
 import Hero
+import CoreData
 
-class HomeController: UIViewController , UITableViewDelegate,UITableViewDataSource, UIScrollViewDelegate {
+class HomeController: UIViewController , UITableViewDelegate,UITableViewDataSource, UIScrollViewDelegate, ProductCellDelegate {
+    let dbArray = DatabaseArray()
+    var products: [NSManagedObject] = []
     let search = UISearchController(searchResultsController: nil)
  
     @IBOutlet weak var cart: UIImageView!
-    var ar : [String] = ["hey","hello","m robot","hey","hello","m robot","hello","m robot","hey","hello","m robot"]
     @IBOutlet weak var productTableView: UITableView!
+    
+    
+    var allProducts = [[String:Any]]()
    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         navigationController?.navigationBar.backgroundColor = UIColor.white
         navigationItem.title = "ios app"
      
@@ -33,22 +39,30 @@ class HomeController: UIViewController , UITableViewDelegate,UITableViewDataSour
         productTableView.delegate = self
         productTableView.dataSource = self
         productTableView.separatorStyle = .none
+        
+        fetchProducts()
+    }
+    
+    private func fetchProducts() {
+        allProducts = ProductList.getAllProducts()
+        productTableView.reloadData()
     }
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return allProducts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-            let cell = productTableView.dequeueReusableCell(withIdentifier: "ProductsCell", for: indexPath) as! ProductsCell
+      
+        let cell = productTableView.dequeueReusableCell(withIdentifier: "ProductsCell", for: indexPath) as! ProductsCell
+      
+        cell.populateWith(product: allProducts[indexPath.row], quantity: getQuantity(productID: allProducts[indexPath.row]["productIDs"] as! String))
+        cell.delegate = self
         
         let str = "\(indexPath.section)" + "-" + "\(indexPath.row)"
         cell.productImage.hero.id = str
-            
             return cell
-
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -56,11 +70,58 @@ class HomeController: UIViewController , UITableViewDelegate,UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailsController = ProductDetailsController()
-        let str = "\(indexPath.section)" + "-" + "\(indexPath.row)"
-        detailsController.myHeroId = str
-        self.present(detailsController, animated: true, completion: nil)
+//        let detailsController = ProductDetailsController()
+//        let str = "\(indexPath.section)" + "-" + "\(indexPath.row)"
+//        detailsController.myHeroId = str
+//        self.present(detailsController, animated: true, completion: nil)
     }
    
+    
+    func getQuantity(productID:String)->Int {
+        
+        return 5
+    }
+    
+    func didTapAddButton(productId: String) {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Products",in: managedContext)!
+        
+        let product = NSManagedObject(entity: entity,insertInto: managedContext)
+        
+        product.setValue(productId, forKeyPath: "id")
+        
+        do {
+            try managedContext.save()
+            products.append(product)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    
+    func didTapMinusButton(productId: String) {
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest =
+            NSFetchRequest<NSManagedObject>(entityName: "Products")
+        
+        do {
+            let product = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
  
+}
 }
