@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 class ProductList {
     class func getAllProducts()->[[String:Any]] {
@@ -44,5 +46,32 @@ class ProductList {
             arr.append(dict)
         }
         return arr
+    }
+    
+    
+    class func getQuantity(productId:String)->Int {
+        let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate
+        
+        let managedContext =
+            appDelegate!.persistentContainer.viewContext
+        
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Products")
+        request.predicate = NSPredicate(format: "id = %@", productId)
+        
+        do {
+            let result = try managedContext.fetch(request)
+            if result.count == 1 {
+                for data in result as! [NSManagedObject] {
+                    print(data.value(forKey: "quantity") as! Int)
+                    return (data.value(forKey: "quantity") as! Int)
+                }
+            }
+        } catch {
+            print("Failed")
+            return 0
+        }
+        return 0
     }
 }
